@@ -36,6 +36,7 @@
 !config/yadm/bootstrap
 !scripts
 !scripts/packages.sh
+!scripts/bootstrap.sh
 !scripts/install.sh
 !scripts/shared.sh
 !scripts/users.sh
