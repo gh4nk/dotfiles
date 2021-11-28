@@ -8,11 +8,8 @@
 !.zshrc
 !.zshenv
 !.zprofile
-!.profile
 !.aliases
-!.env
 !.functions
-!.wallpaper.jpg
 !.xinitrc
 !.xbindkeysrc
 !.config
@@ -38,4 +35,6 @@
 !.config/yadm/
 !.config/yadm/bootstrap
 !.scripts
-!.scripts/*.sh
+!.scripts/packags.sh
+!.scripts/shared.sh
+!.scripts/users.sh
