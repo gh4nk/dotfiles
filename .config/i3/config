@@ -115,15 +115,14 @@ bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace0
 
 # Always open some programs on specified workspace
-assign [class="^Firefox"]          $workspace1
-assign [class="^chromium"]         $workspace1
-assign [class="^Emacs"]            $workspace2
-assign [class="^code-oss"]         $workspace2
-assign [class="Org.gnome.Nautilus"]         $workspace4
-assign [class="Steam"]             $workspace5
-assign [class="lutris"]            $workspace5
-assign [class="^Signal"]            $workspace7
-assign [class="^Thunderbird"]      $workspace9
+assign [class="firefox"]      $workspace1
+assign [class="^Emacs"]        $workspace2
+assign [class="^code-oss"]     $workspace2
+assign [class="Nautilus"]     $workspace4
+assign [class="Steam"]         $workspace5
+assign [class="lutris"]        $workspace5
+assign [class="^Signal"]       $workspace7
+assign [class="^Evolution"]    $workspace9
 
 for_window [class="keepassxc"] move to workspace $workspace6
 for_window [class="TeamSpeak 3"] move to workspace $workspace6
@@ -236,10 +235,8 @@ bar {
 }
 
 # Startup programs
-#exec_always --no-startup-id ~/.scripts/monitors.sh
-#exec_always --no-startup-id ~/.scripts/wallpapers.sh
 exec_always feh --bg-scale ~/.wallpaper.jpg
 exec betterlockscreen -w dim
 exec_always picom --config ~/.config/picom/picom.conf
-#exec --no-startup-id xfce4-power-manager
-#exec --no-startup-id notify-send "Welcome back $USER!" -i ~/.images/icons8-dog-100.png
+
+
