@@ -1,0 +1,85 @@
+#!/bin/bash
+
+
+BASE_PACKAGES=(
+    'curl'
+    'git'
+    'htop'
+    'less'
+    'lsd'
+    'wget'
+    'neofetch'
+    'openvpn'
+    'openssh'
+    'ranger'
+    'tmux'
+    'profanity'
+    'weechat'
+    'whois'
+    'xterm'
+    'zsh'
+    'vim'
+)
+
+CLI_PACKAGES=(
+    'elinks'
+    'emacs-nox'
+)
+
+GUI_PACKAGES=(
+    'adapta-gtk-theme'
+    'adobe-source-code-pro-fonts'
+    'alacritty'
+    'compton'
+    'odt2txt'
+    'acpi'
+    'atool'
+    'ffmpegthumbnailer'
+    'bat'
+    'dhcpcd'
+    'blueman'
+    'bluez-utils'
+    'usbguard'
+    'poppler'
+    'mediainfo'
+    'pacman-contrib'
+    'discount'
+    'emacs'
+    'evince'
+    'feh'
+    'firefox'
+    'i3-gaps'
+    'i3blocks'
+    'i3lock'
+    'npm'
+    'papirus-icon-theme'
+    'rofi'
+    'xbindkeys'
+    'xfce4-notifyd'
+    'xfce4-screenshooter'
+    'xorg'
+    'keepassxc'
+    'texlive'
+)
+
+AUR_PACKAGES=(
+    'gotop'
+    'nerd-fonts-source-code-pro'
+    'nerd-fonts-hack'
+)
+
+BREW_PACKAGES=(
+    'multipass'
+    'slack'
+    'keepassxc'
+    'iterm2'
+    'visual-studio-code'
+    'emacs-plus@28'
+    'kubectl'
+    'helm'
+    'helmfile'
+    'terraform'
+    'font-hack-nerd-font'
+    'textlive'
+    'gpg'
+)

@@ -34,7 +34,19 @@ function packageIterator() {
 
     for i in "${PACKAGES[@]}";
     do
-        if pacman -Qq "$i" > /dev/null ; then
+        if [ "$MANAGER" == brew]; then
+            if ! brew install $i; then
+                banner "I was unable to install the package $i" "warn"
+                exit 1
+            fi
+            continue
+        fi
+
+        if [ "$MANAGER" == apt]; then
+            if ! sudo -u "$SUDO_USER" apt-get install "$i"; then
+                banner "I was unable to install the package $i" "warn"
+                exit 1
+            fi
             continue
         fi
 
@@ -50,5 +62,37 @@ function packageIterator() {
             banner "I was unable to install the package $i" "warn"
             exit 1
         fi
+
     done
+}
+
+function installSpacemacs() {
+    if [ "$(uname -m)" == 'x86_64' ]; then
+        banner "I will install spacemacs"
+
+        sudo -u "$SUDO_USER" -- sh -c "
+        git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d &>/dev/null
+        cd ~/.emacs.d
+        git checkout develop &>/dev/null
+        cd - &>/dev/null"
+    fi
+}
+
+function installAntigen(){
+    curl -L git.io/antigen > $HOME/.antigen.zsh
+}
+
+function installVimconfig(){
+    git clone --depth=1 https://github.com/amix/vimrc.git $HOME/.vim_runtime
+    sh $HOME/.vim_runtime/install_awesome_vimrc.sh
+
+}
+function sshKeys() {
+    banner "I'll import gh4nk's SSH keys"
+
+    sudo -u "$createVal" -- sh -c "
+    mkdir ~/.ssh
+    chmod 700 ~/.ssh
+    curl https://github.com/gh4nk.keys -o ~/.ssh/authorized_keys
+    chmod 600 ~/.ssh/authorized_keys"
 }

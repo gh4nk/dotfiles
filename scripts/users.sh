@@ -72,15 +72,6 @@ function createUser() {
     passwd "$createVal"
 }
 
-function sshKeys() {
-    banner "I'll import Andrea's SSH keys"
-
-    sudo -u "$createVal" -- sh -c "
-    mkdir ~/.ssh
-    chmod 700 ~/.ssh
-    curl https://github.com/da-edra.keys -o ~/.ssh/authorized_keys
-    chmod 600 ~/.ssh/authorized_keys"
-}
 
 createUser
 sshKeys
