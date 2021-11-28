@@ -1,0 +1,6 @@
+#!/bin/sh
+curl -L git.io/antigen > $HOME/.antigen.zsh
+git clone https://github.com/vivien/i3blocks-contrib.git $HOME/.i3/i3scripts/
+git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+git clone --depth=1 https://github.com/amix/vimrc.git $HOME/.vim_runtime
+sh $HOME/.vim_runtime/install_awesome_vimrc.sh
