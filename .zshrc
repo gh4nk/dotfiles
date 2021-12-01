@@ -16,6 +16,10 @@ antigen bundle Valiev/almostontop
 antigen bundle djui/alias-tips
 antigen bundle juanrgon/yadm-zsh
 
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    antigen bundle macos
+fi
+
 antigen theme romkatv/powerlevel10k
 
 antigen apply
