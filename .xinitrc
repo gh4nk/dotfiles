@@ -17,6 +17,6 @@ else
 		. $XDG_RUNTIME_DIR/ssh-agent-env
 	fi
 fi
-
+setxkbmap -option "ctrl:nocaps"
 xbindkeys
 exec i3
