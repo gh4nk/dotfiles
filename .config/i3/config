@@ -23,8 +23,8 @@ floating_modifier $mod
 bindsym $mod+Return exec alacritty
 
 # Kill focused window
-bindsym $mod+Shift+q kill
-bindsym $mod+Shift+w exec xkill
+bindsym $mod+Shift+q exec xkill
+bindsym $mod+Shift+w kill
 
 
 
@@ -122,6 +122,7 @@ assign [class="Nautilus"]     $workspace4
 assign [class="Steam"]         $workspace5
 assign [class="lutris"]        $workspace5
 assign [class="^Signal"]       $workspace7
+assign [class="discord"]       $workspace7
 assign [class="^Evolution"]    $workspace9
 
 for_window [class="keepassxc"] move to workspace $workspace6
