@@ -11,10 +11,7 @@ antigen bundle git-flow
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle terraform
 antigen bundle colorize
-antigen bundle emacs
-antigen bundle Valiev/almostontop 
 antigen bundle djui/alias-tips
-antigen bundle juanrgon/yadm-zsh
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
     antigen bundle macos
@@ -24,13 +21,13 @@ antigen theme romkatv/powerlevel10k
 
 antigen apply
 
- [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-source $HOME/.aliases
-source $HOME/.env
-source $HOME/.passwords
-source $HOME/.functions
+ [[ ! -f ~/.p10k.zsh ]]     || source ~/.p10k.zsh
+ [[ ! -f ~/.aliases ]]      || source ~/.aliases
+ [[ ! -f ~/.env ]]          || source ~/.env
+ [[ ! -f ~/.functions ]]    || source ~/.functions
+ [[ ! -f ~/.passwords ]]    || source ~/.passwords
+
 source <(kubectl completion zsh)
-eval $(thefuck --alias)
 complete -o nospace -C /usr/bin/vault vault
 complete -o nospace -C /usr/bin/terraform terraform
 
@@ -42,4 +39,3 @@ compinit
 promptinit
 bashcompinit
 zstyle :compinstall filename '$HOME/.zshrc'
-neofetch

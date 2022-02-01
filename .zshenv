@@ -1,8 +1,8 @@
 export LC_ALL=en_US.UTF-8
 export TERMINAL=alacritty
 export PAGER=less
-export VISUAL=emacs
-export EDITOR=emacs
+export VISUAL=code
+export EDITOR=vim
 export TERM="xterm-256color"
 export GPG_TTY=$(tty)
 export LESS_TERMCAP_md=$'\e[1;36m'
