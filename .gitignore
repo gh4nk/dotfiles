@@ -2,6 +2,7 @@
 !README.md
 !LICENSE
 !.gitignore
+!.gitignore_global
 !.gitmessage
 !.gitconfig
 !.spacemacs
