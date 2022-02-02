@@ -44,7 +44,7 @@ border_left=0
 
 [arch_update]
 command=checkupdates | wc -l
-interval=once
+interval=20
 label=<span color="#1793d1"> </span>
 border=#1793d1
 border_top=1
