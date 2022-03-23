@@ -18,15 +18,17 @@
 	editor = vim
 	pager = less
 	excludesfile = ~/.gitignore_global
-[url "ssh://git@github.com/"]
-	insteadOf = https://github.com/
-[url "ssh://git@gitlab.com/"]
-	insteadOf = https://gitlab.com/
-[url "ssh://git@bitbucket.org/"]
-	insteadOf = https://bitbucket.org/
+# [url "ssh://git@github.com/"]
+# 	insteadOf = https://github.com/
+# [url "ssh://git@gitlab.com/"]
+# 	insteadOf = https://gitlab.com/
+# [url "ssh://git@bitbucket.org/"]
+# 	insteadOf = https://bitbucket.org/
 [init]
 	defaultBranch = main
 [pull]
 	rebase = false
 [include]
 	path = .gitconfig_user
+[credential]
+	helper = cache --timeout=3600
